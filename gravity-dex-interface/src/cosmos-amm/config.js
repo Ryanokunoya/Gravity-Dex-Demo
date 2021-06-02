@@ -1,7 +1,8 @@
-import { defaultBech32Config } from "@chainapsis/cosmosjs/core/bech32Config";
+import {
+  defaultBech32Config
+} from "@chainapsis/cosmosjs/core/bech32Config";
 
-export const currencies = [
-  {
+export const currencies = [{
     coinDenom: "FECAL",
     coinMinimalDenom: "ufecal",
     coinDecimals: 6
@@ -85,7 +86,7 @@ export const currencies = [
     coinDenom: "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
     coinMinimalDenom: "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
     coinDecimals: 6
-      
+
   }
 ]
 
@@ -103,20 +104,18 @@ export const chainInfo = {
   // rest: "https://competition.bharvest.io:1317",
   rpc: "http://localhost:26657",
   rest: "http://localhost:1317",
-  chainId: "informal-testnet-1",
-  chainName: "Informal DeX",
+  chainId: "consensus-testnet",
+  chainName: "Consensus Testnet",
   stakeCurrency: stakingCurrency,
   bip44: {
     coinType: 118
   },
   bech32Config: defaultBech32Config("cosmos"),
   currencies: [stakingCurrency].concat(currencies),
-  feeCurrencies: [
-    {
-      coinDenom: "AURUM",
-      coinMinimalDenom: "uaurum",
-      coinDecimals: 6
-    }
-  ],
+  feeCurrencies: [{
+    coinDenom: "AURUM",
+    coinMinimalDenom: "uaurum",
+    coinDecimals: 6
+  }],
   features: ["stargate", "ibc-transfer"]
 };
